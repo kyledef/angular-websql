@@ -153,6 +153,9 @@ angular.module("angular-websql", []).factory("$webSql", ["$q",
 						dropTable: function(a) {
 							return this.executeQuery("DROP TABLE IF EXISTS `" + a + "`; ", []);
 						},
+						getDB : function(){
+							return db;
+						}
 					};
 				} catch (err) {
 					console.error(err);
